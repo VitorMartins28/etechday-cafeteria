@@ -6,8 +6,8 @@
   $servename = "localhost";
 	$username = "root";
   $password = "";
-  $port     = 3307 ;
-	$database = "etechday" ;
+  $port     = 3306 ;
+	$database = "aluno" ;
 
 	//2. criar conexão no servidor
   $conn = mysqli_connect($servename, $username, $password, $database, $port );
@@ -16,6 +16,9 @@
 	//2.1 testar conexão
 	if (!$conn){
 		die("falha na conexão: ".mysqli_connect_error());
+	}
+	else{
+		echo "Deu certo a conexão!";
 	}
 
 ?>
