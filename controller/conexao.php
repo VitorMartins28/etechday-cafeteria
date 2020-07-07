@@ -7,7 +7,7 @@
 	$username = "root";
   $password = "";
   $port     = 3306 ;
-	$database = "aluno" ;
+	$database = "aluno";
 
 	//2. criar conexão no servidor
   $conn = mysqli_connect($servename, $username, $password, $database, $port );
