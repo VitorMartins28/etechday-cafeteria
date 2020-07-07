@@ -11,7 +11,7 @@
 
 	//2. criar conexão no servidor
   $conn = mysqli_connect($servename, $username, $password, $database, $port );
-  mysqli_set_charset($conn, "utf8") ;
+  mysqli_set_charset($conn, "utf8");
 
 	//2.1 testar conexão
 	if (!$conn){
