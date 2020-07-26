@@ -3,10 +3,15 @@ include '../../../controller/conexao.php';
 
 $resposta = array( ) ;
 
+$nome = $_REQUEST["nome"];
+$preco = $_REQUEST["preco"];
+$id_produto = $_REQUEST["id_produto"];
 
-$sql = "
-  select * from alunos ";
-
+$sql = "UPDATE produtos 
+SET nome = '".$nome."', 
+    preco = '".$preco."'
+    WHERE id_produto = ".$id_produto."
+";
 
   $retornoBanco = mysqli_query( $conn, $sql ) ;
 

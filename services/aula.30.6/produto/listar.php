@@ -5,7 +5,7 @@ $resposta = array( ) ;
 
 
 $sql = "
-  select * from alunos ";
+  select * from produtos ";
 
 
   $retornoBanco = mysqli_query( $conn, $sql ) ;

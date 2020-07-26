@@ -3,10 +3,15 @@ include '../../../controller/conexao.php';
 
 $resposta = array( ) ;
 
+$nome = $_REQUEST["nome"];
+$preco = $_REQUEST["preco"];
+
+  
 
 $sql = "
-  select * from alunos ";
-
+    insert into produtos (nome, preco)
+    values
+    ('". $nome . "', '". $preco ."')";
 
   $retornoBanco = mysqli_query( $conn, $sql ) ;
 
@@ -19,7 +24,7 @@ $sql = "
 
     $resposta["status"] = 0 ;
     $resposta["msg"]    = "success" ;
-    $resposta["data"]   = mysqli_fetch_all( $retornoBanco ) ;
+    $resposta["last_id"] = mysqli_insert_id( $conn ) ;
 
   }
 
